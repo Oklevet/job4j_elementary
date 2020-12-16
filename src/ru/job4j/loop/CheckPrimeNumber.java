@@ -10,7 +10,7 @@ public class CheckPrimeNumber {
             if (number % 2 == 0) {
                 prime = false;
                 break;
-                //return false;   // just okay
+                //return false;   //just okay
             }
         }
         return prime;
