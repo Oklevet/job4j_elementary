@@ -6,6 +6,7 @@ public class Cat {
     private String nick;
 
     public void show() {
+
         System.out.println(this.nick + " ate " + this.food);
     }
 
