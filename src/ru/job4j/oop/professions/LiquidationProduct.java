@@ -2,7 +2,7 @@ package ru.job4j.oop.professions;
 
 import ru.job4j.oop.Product;
 
-public class LiquidationProduct {
+public final class LiquidationProduct {
     private Product product;
 
     public LiquidationProduct(String name, int price) {
