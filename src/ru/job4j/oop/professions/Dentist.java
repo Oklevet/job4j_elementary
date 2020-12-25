@@ -3,6 +3,14 @@ package ru.job4j.oop.professions;
 public class Dentist extends Doctor {
     private int salary;
 
+    public Dentist(String name, String surname) {
+        super(name, surname);
+    }
+
+    public Dentist(String name, String surname, String education, String birthday) {
+        super(name, surname, education, birthday);
+    }
+
     public int getSalary() {
         return salary;
     }

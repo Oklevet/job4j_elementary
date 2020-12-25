@@ -3,6 +3,14 @@ package ru.job4j.oop.professions;
 public class Programmer extends Engineer {
     private int experience;
 
+    public Programmer(String name, String surname) {
+        super(name, surname);
+    }
+
+    public Programmer(String name, String surname, String education, String birthday) {
+        super(name, surname, education, birthday);
+    }
+
     public int getExperience() {
         return experience;
     }
