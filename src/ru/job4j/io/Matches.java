@@ -9,7 +9,12 @@ public class Matches {
         Scanner input = new Scanner(System.in);
         while (num > 0) {
             System.out.println("Оставшееся число спичек: " + num);
-            n = Integer.valueOf(input.nextLine());
+            do {
+                n = Integer.valueOf(input.nextLine());
+                if (n < 1 || n > 3) {
+                    System.out.println("Введите число от 1 до 3");
+                }
+            } while (n < 1 || n > 3);
             if (player % 2 != 0) {
                 System.out.println(s1 + " игрок отнимает " + n + " спички.");
             } else {
