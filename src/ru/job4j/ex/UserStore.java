@@ -24,15 +24,14 @@ public class UserStore {
         };
         try {
             User user = findUser(users, "Petr Arsentev");
-            try {
-                validate(user);
-                System.out.println("This user has been an access");
-            } catch (UserInvalidException e) {
+            validate(user);
+            System.out.println("This user has been an access");
+        } catch (UserInvalidException e) {
                 System.out.println("Invalid user.");
-            }
         } catch (UserNotFoundException e) {
-            System.out.println("User not found.");
+                System.out.println("User not found.");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
     }
 }
