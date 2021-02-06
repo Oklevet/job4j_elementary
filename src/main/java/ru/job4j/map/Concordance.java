@@ -13,7 +13,11 @@ public class Concordance {
             list.add(i);
             Character c = s.charAt(i);
             // i - Variable used in lambda expression should be final or effectively final
-            collect.computeIfPresent(c, (key, value) -> value.add(i));
+            int finalI = i;
+            collect.computeIfPresent(c, (key, value) -> {
+                value.add(finalI);
+                return value;
+            });
             collect.computeIfAbsent(c, key -> list);
         }
         return collect;
